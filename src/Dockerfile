@@ -1,6 +1,6 @@
 FROM maven:latest
 WORKDIR FarToCel
-COPY pom.xml //
+COPY pom.xml /FarToCel/
 COPY . /FarToCel/
 RUN mvn package
 #CMD ["java", "-jar", "target/dockerdemo.jar"]
