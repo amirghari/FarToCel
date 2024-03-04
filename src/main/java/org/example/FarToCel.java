@@ -1,5 +1,5 @@
 package org.example;
-public class FahrToCel {
+public class FarToCel {
     public static void main(String[] args) {
     }
     public static float fahrToCel(float f) {
