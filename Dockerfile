@@ -1,7 +1,12 @@
+# Use an official Maven image as a parent image
 FROM maven:latest
-WORKDIR /FarToCel
-COPY pom.xml /FarToCel/
-COPY src /FarToCel/
+# Set the working directory in the container
+WORKDIR /app
+# Copy the pom.xml file to the container
+COPY pom.xml /app/
+# Copy the entire project to the container
+COPY . /app/
+# Package your application
 RUN mvn package
-#CMD ["java", "-jar", "target/dockerdemo.jar"]
+# Run the main class (assuming your application has a main class)
 ENTRYPOINT ["java", "-jar", "target/interconversions.jar"]
